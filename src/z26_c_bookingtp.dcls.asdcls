@@ -1,0 +1,11 @@
+@EndUserText.label: 'TRAIN-26'
+@MappingRole: true
+define role Z26_C_BOOKINGTP {
+    grant 
+        select
+            on
+                Z26_C_BOOKINGTP
+                    where
+                        ( AirlineID ) = aspect pfcg_auth(S_CARRID, CARRID, ACTVT = '03' );
+                        
+}
